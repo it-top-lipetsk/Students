@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
+using Students.DB_Lib;
+using Students.Model;
 
 namespace Students.App.Authorization
 {
@@ -23,7 +26,13 @@ namespace Students.App.Authorization
 
         private void ButtonAuth_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            var login = InputLogin.Text;
+            var password = InputPassword.Password;
+
+            var db = new DbStudents();
+            var account = db.TabAccounts.FirstOrDefault(a => a.Login == login && a.Password == password);
+
+            MessageBox.Show(account is null ? "Неправильно ввели логин и пароль!" : "Добро пожаловать!");
         }
     }
 }
