@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students.Model", "Students.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students.DB_Lib", "Students.DB_Lib\Students.DB_Lib.csproj", "{AA29DE98-FEED-4D24-ABA9-E9DE8339FEA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students.Test.Db", "Students.Test.Db\Students.Test.Db.csproj", "{D6799405-3427-4171-9DB0-A4AEABCAAD7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AA29DE98-FEED-4D24-ABA9-E9DE8339FEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA29DE98-FEED-4D24-ABA9-E9DE8339FEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA29DE98-FEED-4D24-ABA9-E9DE8339FEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6799405-3427-4171-9DB0-A4AEABCAAD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6799405-3427-4171-9DB0-A4AEABCAAD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6799405-3427-4171-9DB0-A4AEABCAAD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6799405-3427-4171-9DB0-A4AEABCAAD7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
