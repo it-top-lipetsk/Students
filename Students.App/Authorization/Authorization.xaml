@@ -5,23 +5,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Students.App"
         mc:Ignorable="d"
-        Title="Authorization" Height="450" Width="450">
+        Title="Authorization" Height="275" Width="275" ResizeMode="NoResize">
     <Window.Resources>
         <ResourceDictionary Source="AuthorizationStyles.xaml"/>
     </Window.Resources>
+    
     <StackPanel>
-        <Label x:Name="LabelTitle">Авторизация</Label>
+        <Label x:Name="LabelTitle" 
+               Content="Авторизация"
+               Style="{StaticResource StyleLabelTitle}"/>
+        
         <StackPanel Orientation="Horizontal">
-            <Label x:Name="LabelInputLogin">Login</Label>
-            <TextBox x:Name="InputLogin"/>
+            <Label x:Name="LabelInputLogin" 
+                   Content="Login"
+                   Style="{StaticResource StyleLabelInput}"/>
+            <TextBox x:Name="InputLogin"
+                     Style="{StaticResource StyleInput}"/>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal">
-            <Label x:Name="LabelInputPassword">Password</Label>
-            <PasswordBox x:Name="InputPassword"/>
+            <Label x:Name="LabelInputPassword" 
+                   Content="Password"
+                   Style="{StaticResource StyleLabelInput}"/>
+            <PasswordBox x:Name="InputPassword"
+                         Style="{StaticResource StyleInput}"/>
         </StackPanel>
-        <DockPanel LastChildFill="False">
-            <Button x:Name="ButtonCancel" DockPanel.Dock="Left">Cancel</Button>
-            <Button x:Name="ButtonAuth" DockPanel.Dock="Right">Authorization</Button>
-        </DockPanel>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="ButtonCancel" 
+                    Content="Отмена"
+                    Click="ClosedWindow"
+                    Style="{StaticResource StyleButtonCancel}"/>
+            <Button x:Name="ButtonAuth" 
+                    Content="Войти"
+                    Click="ButtonAuth_OnClick"
+                    Style="{StaticResource StyleButtonAuth}"/>
+        </StackPanel>
     </StackPanel>
 </Window>
