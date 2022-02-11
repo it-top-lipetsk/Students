@@ -1,0 +1,45 @@
+﻿<Window x:Class="Students.App.Authorization.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Students.App"
+        mc:Ignorable="d"
+        Title="Authorization" Height="275" Width="275" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="AuthorizationStyles.xaml"/>
+    </Window.Resources>
+    
+    <StackPanel>
+        <Label x:Name="LabelTitle" 
+               Content="Авторизация"
+               Style="{StaticResource StyleLabelTitle}"/>
+        
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="LabelInputLogin" 
+                   Content="Login"
+                   Style="{StaticResource StyleLabelInput}"/>
+            <TextBox x:Name="InputLogin"
+                     Style="{StaticResource StyleInput}"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="LabelInputPassword" 
+                   Content="Password"
+                   Style="{StaticResource StyleLabelInput}"/>
+            <PasswordBox x:Name="InputPassword"
+                         Style="{StaticResource StyleInput}"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="ButtonCancel" 
+                    Content="Отмена"
+                    Click="ButtonCancel_OnClick"
+                    Style="{StaticResource StyleButtonCancel}"/>
+            <Button x:Name="ButtonAuth" 
+                    Content="Войти"
+                    Click="ButtonAuth_OnClick"
+                    Style="{StaticResource StyleButtonAuth}"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
