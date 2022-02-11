@@ -1,8 +1,6 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows;
 using Students.DB_Lib;
-using Students.Model;
 
 namespace Students.App.Authorization
 {
@@ -11,17 +9,6 @@ namespace Students.App.Authorization
         public Authorization()
         {
             InitializeComponent();
-            Closing += ClosedWindow;
-        }
-
-        private void ClosedWindow(object sender, EventArgs e)
-        {
-            var res = MessageBox.Show("Хотите выйти?", "Closed", MessageBoxButton.YesNo);
-
-            if (res == MessageBoxResult.Yes)
-            {
-                //TODO Закрытие всего приложения
-            }
         }
 
         private void ButtonAuth_OnClick(object sender, RoutedEventArgs e)
@@ -32,7 +19,24 @@ namespace Students.App.Authorization
             var db = new DbStudents();
             var account = db.TabAccounts.FirstOrDefault(a => a.Login == login && a.Password == password);
 
-            MessageBox.Show(account is null ? "Неправильно ввели логин и пароль!" : "Добро пожаловать!");
+            if (account is null)
+            {
+                MessageBox.Show("Неправильно ввели логин и пароль!", "!!! ERROR !!!");
+            }
+            else
+            {
+                MessageBox.Show("Добро пожаловать!");
+                var main = new MainWindow(account);
+                main.Show();
+                Close();
+            }
+            
+        }
+
+        private void ButtonCancel_OnClick(object sender, RoutedEventArgs e)
+        {
+            InputLogin.Clear();
+            InputPassword.Clear();
         }
     }
 }

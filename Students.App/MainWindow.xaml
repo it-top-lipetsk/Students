@@ -4,9 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Students.App"
+        xmlns:component="clr-namespace:Students.App.Components"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TabControl x:Name="TabControl_User">
+            <TabItem x:Name="TabItem_Student"
+                     Header="Студент">
+                <component:Student/>
+            </TabItem>
+            <TabItem x:Name="TabItem_Teacher"
+                     Header="Преподаватель">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <ListBox Grid.Column="0"></ListBox>
+                    
+                    <component:Student Grid.Column="1"></component:Student>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItem_Admin"
+                     Header="Администратор">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <ListBox Grid.Column="0"></ListBox>
+                    
+                    <component:Student Grid.Column="1"></component:Student>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
