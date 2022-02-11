@@ -11,7 +11,6 @@
         <TabControl x:Name="TabControl_User">
             <TabItem x:Name="TabItem_Student"
                      Header="Студент">
-                <component:Student/>
             </TabItem>
             <TabItem x:Name="TabItem_Teacher"
                      Header="Преподаватель">
@@ -22,8 +21,6 @@
                     </Grid.ColumnDefinitions>
                     
                     <ListBox Grid.Column="0"></ListBox>
-                    
-                    <component:Student Grid.Column="1"></component:Student>
                 </Grid>
             </TabItem>
             <TabItem x:Name="TabItem_Admin"
@@ -35,8 +32,6 @@
                     </Grid.ColumnDefinitions>
                     
                     <ListBox Grid.Column="0"></ListBox>
-                    
-                    <component:Student Grid.Column="1"></component:Student>
                 </Grid>
             </TabItem>
         </TabControl>

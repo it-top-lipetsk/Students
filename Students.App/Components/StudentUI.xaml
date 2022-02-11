@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Students.App.Components.Student"
+﻿<UserControl x:Class="Students.App.Components.StudentUI"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -32,9 +32,9 @@
         <StackPanel Orientation="Horizontal">
             <Label Content="Пол"
                    Style="{StaticResource Style_Label}"/>
-            <RadioButton GroupName="Input_Sex" Content="М"
+            <RadioButton x:Name="Input_SexMale" GroupName="Sex" Content="М"
                          Style="{StaticResource Style_Default}"/>
-            <RadioButton GroupName="Input_Sex" Content="Ж"
+            <RadioButton x:Name="Input_SexFemale" GroupName="Sex" Content="Ж"
                          Style="{StaticResource Style_Default}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
