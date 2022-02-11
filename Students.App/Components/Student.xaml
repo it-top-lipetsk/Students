@@ -12,25 +12,36 @@
     
     <StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label Content="Фамилия"/>
-            <TextBox x:Name="Input_LastName"/>
+            <Label Content="Фамилия"
+                   Style="{StaticResource Style_Label}"/>
+            <TextBox x:Name="Input_LastName"
+                     Style="{StaticResource Style_InputText}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label Content="Имя"/>
-            <TextBox x:Name="Input_FirstName"/>
+            <Label Content="Имя"
+                   Style="{StaticResource Style_Label}"/>
+            <TextBox x:Name="Input_FirstName"
+                     Style="{StaticResource Style_InputText}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label Content="Дата рождения"/>
-            <DatePicker x:Name="Input_DateOfBirth"/>
+            <Label Content="Дата рождения"
+                   Style="{StaticResource Style_Label}"/>
+            <DatePicker x:Name="Input_DateOfBirth"
+                        Style="{StaticResource Style_Default}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label Content="Пол"/>
-            <RadioButton GroupName="Input_Sex" Content="М"/>
-            <RadioButton GroupName="Input_Sex" Content="Ж"/>
+            <Label Content="Пол"
+                   Style="{StaticResource Style_Label}"/>
+            <RadioButton GroupName="Input_Sex" Content="М"
+                         Style="{StaticResource Style_Default}"/>
+            <RadioButton GroupName="Input_Sex" Content="Ж"
+                         Style="{StaticResource Style_Default}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label Content="Группа"/>
-            <ComboBox x:Name="Select_GroupName"/>
+            <Label Content="Группа"
+                   Style="{StaticResource Style_Label}"/>
+            <ComboBox x:Name="Select_GroupName"
+                      Style="{StaticResource Style_Select}"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
